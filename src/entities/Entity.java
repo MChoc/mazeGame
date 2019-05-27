@@ -11,10 +11,6 @@ public class Entity {
 	public boolean isOverlappable() {
 		return overlappable;
 	}
-
-	public void setOverlappable(boolean overlappable) {
-		this.overlappable = overlappable;
-	}
 	
 	public String getName() {
 		return this.getClass().getSimpleName().toLowerCase();

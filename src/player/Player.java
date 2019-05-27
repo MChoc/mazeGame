@@ -2,7 +2,7 @@ package player;
 
 import exceptions.InvalidActionException;
 import liveEntities.LiveEntity;
-import mazeManagement.Maze;
+import mazeManagement.MazeController;
 
 public class Player extends LiveEntity {
 
@@ -16,7 +16,16 @@ public class Player extends LiveEntity {
 		playerState = newState;
 	}
 
-	public void move(Maze maze, String dir) throws InvalidActionException {
+	public void move(MazeController maze, String dir) throws InvalidActionException {
 		playerState.move(this, maze, dir);
 	}
+
+	public void sword(MazeController maze, String dir) {
+
+	}
+
+	public void arrow(MazeController maze, String dir) {
+
+	}
+	
 }

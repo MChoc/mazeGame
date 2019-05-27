@@ -1,17 +1,19 @@
 package mazeManagement;
 
-import entities.Background;
-import entities.Entity;
-import entities.Wall;
-import exceptions.InvalidActionException;
+import java.util.ArrayList;
 
-public class Maze {
+import entities.*;
+import exceptions.InvalidActionException;
+import liveEntities.*;
+
+public class MazeController {
 
 	Entity[][] maze;
+	ArrayList<LiveEntity> liveEntities;
 	boolean hoverPotionCheck = false;
 	boolean invincibilityPotionCheck = false;
 
-	public Maze(int xDim, int yDim) {
+	public MazeController(int xDim, int yDim) {
 		this.maze = new Entity[xDim][yDim];
 		mazeSetup();
 	}
@@ -21,6 +23,8 @@ public class Maze {
 			for (int j=0; j<maze[i].length; j++) {
 				if (i == 0 || i == maze.length-1 || j == 0 || j == maze[i].length-1) {
 					maze[i][j] = new Wall();
+				} else {
+					maze[i][j] = new Background();
 				}
 			}
 		}
@@ -46,7 +50,7 @@ public class Maze {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		Maze maze = new Maze(10, 10);
+		MazeController maze = new MazeController(10, 10);
 		for (int i=0; i<maze.getMaze().length; i++) {
 			System.out.println();
 			for(int j=0; j<maze.getMaze()[i].length; j++) {

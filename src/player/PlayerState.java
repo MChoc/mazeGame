@@ -1,10 +1,10 @@
 package player;
 
 import exceptions.InvalidActionException;
-import mazeManagement.Maze;
+import mazeManagement.MazeController;
 
 public interface PlayerState {
 
-	public boolean move(Player player, Maze maze, String dir) throws InvalidActionException;
+	public boolean move(Player player, MazeController mazeController, String dir) throws InvalidActionException;
 
 }

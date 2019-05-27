@@ -12,7 +12,7 @@ public class FloorSwitch extends Entity {
 	}
 	
 	public boolean takeBoulder(Boulder boulder) throws InvalidActionException {
-		if(boulder != null) {
+		if(this.boulder != null) {
 			throw new InvalidActionException("Boulder in the way");
 		}
 		this.boulder = boulder;

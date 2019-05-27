@@ -9,6 +9,8 @@ public class LiveEntity extends Entity {
 
 	public LiveEntity(int r, int c, boolean overlappable) {
 		super(overlappable);
+		this.r = r;
+		this.c = c;
 	}
 
 	public int getR() {

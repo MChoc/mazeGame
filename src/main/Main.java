@@ -2,7 +2,13 @@ package main;
 
 import java.util.Scanner;
 
+import mazeManagement.MazeController;
+import player.Player;
+
 public class Main {
+	
+	MazeController mazeController;
+	Player player;
 	
 	public Main() {
 		
